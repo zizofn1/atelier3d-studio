@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+:root,
+[data-theme="sombre"] {
+  --atelier-bg: #0b0e14;
+  --atelier-panel: #12161f;
+  --atelier-surface: #1a202c;
+  --atelier-surface-2: #0f141d;
+  --atelier-viewport-bg: #090d14;
+  --atelier-glass: rgba(18, 22, 31, 0.82);
+  --atelier-glass-border: rgba(255, 255, 255, 0.1);
+  --atelier-border: #2a3243;
+  --atelier-border-strong: #3b455b;
+  --atelier-fg: #f2efe9;
+  --atelier-fg-muted: #a9b0be;
+  --atelier-fg-subtle: #8d96a7;
+  --atelier-accent: #e8a33d;
+  --atelier-accent-hover: #f2b85c;
+  --atelier-accent-fg: #1a1205;
+  --atelier-accent-text: #fbbf24;
+  --atelier-info-text: #7dd3fc;
+  --atelier-success-text: #6ee7b7;
+  --atelier-danger-text: #fca5a5;
+  --atelier-scrollbar-track: #0b0e14;
+  --atelier-scrollbar-thumb: #2a3243;
+}
+
+[data-theme="clair"] {
+  --atelier-bg: #f6f4ef;
+  --atelier-panel: #ffffff;
+  --atelier-surface: #efece5;
+  --atelier-surface-2: #e7e3da;
+  --atelier-viewport-bg: #e6e9f0;
+  --atelier-glass: rgba(255, 255, 255, 0.93);
+  --atelier-glass-border: rgba(27, 26, 23, 0.12);
+  --atelier-border: #d9d4c9;
+  --atelier-border-strong: #b8b1a3;
+  --atelier-fg: #1b1a17;
+  --atelier-fg-muted: #4e4b44;
+  --atelier-fg-subtle: #615d54;
+  --atelier-accent: #b45309;
+  --atelier-accent-hover: #92400e;
+  --atelier-accent-fg: #ffffff;
+  --atelier-accent-text: #92400e;
+  --atelier-info-text: #0369a1;
+  --atelier-success-text: #166534;
+  --atelier-danger-text: #b91c1c;
+  --atelier-scrollbar-track: #efece5;
+  --atelier-scrollbar-thumb: #c7c1b5;
+}
+
+@theme {
+  --color-atelier-bg: var(--atelier-bg);
+  --color-atelier-panel: var(--atelier-panel);
+  --color-atelier-surface: var(--atelier-surface);
+  --color-atelier-surface-2: var(--atelier-surface-2);
+  --color-atelier-viewport: var(--atelier-viewport-bg);
+  --color-atelier-border: var(--atelier-border);
+  --color-atelier-border-strong: var(--atelier-border-strong);
+  --color-atelier-fg: var(--atelier-fg);
+  --color-atelier-muted: var(--atelier-fg-muted);
+  --color-atelier-subtle: var(--atelier-fg-subtle);
+  --color-atelier-accent: var(--atelier-accent);
+  --color-atelier-accent-hover: var(--atelier-accent-hover);
+  --color-atelier-accent-fg: var(--atelier-accent-fg);
+  --color-atelier-accent-text: var(--atelier-accent-text);
+  --color-atelier-info: var(--atelier-info-text);
+  --color-atelier-success: var(--atelier-success-text);
+  --color-atelier-danger: var(--atelier-danger-text);
+  --font-sans: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", "Cascadia Code", ui-monospace, monospace;
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--atelier-bg);
+    color: var(--atelier-fg);
+    font-family: var(--font-sans);
+  }
+}
+
+.atelier-glass {
+  background-color: var(--atelier-glass);
+  border-color: var(--atelier-glass-border);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+}
+
+[data-density="coarse"] .atelier-touch {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--atelier-scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--atelier-scrollbar-thumb);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--atelier-border-strong);
+}

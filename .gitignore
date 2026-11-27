@@ -1,0 +1,19 @@
+# Dependencies and local environments
+node_modules/
+backend/render_server/.venv/
+**/__pycache__/
+*.py[cod]
+
+# Build and test artifacts
+dist/
+test-results/
+playwright-report/
+coverage/
+
+# Local settings and credentials
+.env
+.env.*
+!.env.example
+
+# Local Atelier3D project data may contain customer designs
+*.atelier3d.json
